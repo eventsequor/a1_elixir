@@ -90,7 +90,7 @@ item3 = %BoutiqueInventory.SingleItemBoutique{
 item4 = %BoutiqueInventory.SingleItemBoutique{
   name: "cachucha",
   price: 0,
-  quantity_by_size: %{:s => 3, :m => 4}
+  quantity_by_size: %{:s => 3, :m => 4, :l =>17}
 }
 
 item5 = %BoutiqueInventory.SingleItemBoutique{
@@ -124,3 +124,6 @@ IO.inspect(inventory)
 IO.puts("\n\Missing item of price")
 inventory = BoutiqueInventory.with_missing_price(inventory)
 IO.inspect(inventory)
+
+IO.puts("\n\Total quantity of element")
+IO.inspect(BoutiqueInventory.total_quantity(item4))
